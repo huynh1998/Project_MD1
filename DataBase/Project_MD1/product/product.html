@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product</title>
+    <link rel="stylesheet" href="product.css" />
+  </head>
+  <body>
+    <header>
+      <h2>Product</h2>
+      <div class="header">
+        <p><i class="fa-solid fa-bars"></i></p>
+        <div class="header-right">
+          <p>Chào mừng bạn đã quay trở lại</p>
+          <p>
+            <i class="fa-solid fa-user"></i>
+            <strong>Huynhpham</strong>
+          </p>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="main-left">
+        <ul>
+          <li>
+            <a href=""><i class="fa-solid fa-chart-simple"></i> Statistical</a>
+          </li>
+          <li>
+            <a href=""><i class="fa-solid fa-table-cells"></i> Product</a>
+          </li>
+          <li>
+            <a href=""
+              ><i class="fa-solid fa-hand-holding-dollar"></i> Revenue</a
+            >
+          </li>
+          <li>
+            <a href=""><i class="fa-solid fa-user"></i> User</a>
+          </li>
+          <li>
+            <a href=""><i class="fa-solid fa-cart-shopping"></i> Order</a>
+          </li>
+        </ul>
+      </div>
+      <div class="main-right">
+        <div class="main-right-top">
+          <button id="create-newproduct">Create New Product</button>
+        </div>
+        <div class="main-right-center">
+          <div>
+            <input type="text" id="text-search" />
+            <button id="search">Search</button>
+          </div>
+          <div>
+            <label for="fillter-price">Price</label>
+            <select name="quantity" id="filter-price">
+              <option value="0">Tất cả</option>
+              <option value="1">Dưới 200.000đ</option>
+              <option value="2">Từ 200.000đ-500.000đ</option>
+              <option value="3">Trên 500.000đ</option>
+            </select>
+          </div>
+          <div>
+            <label for="category">Category</label>
+            <select name="category" id="select-category">
+              <!-- <option value="category">Tất cả</option>
+              <option value="category">Tiểu cảnh</option>
+              <option value="category">Cây để bàn</option>
+              <option value="category">Cây nội thất lớn</option>
+              <option value="category">Cây giỏ treo</option>
+              <option value="category">Chậu</option> -->
+            </select>
+          </div>
+        </div>
+        <div class="main-right-bottom">
+          <table>
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>Image</th>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Inventory</th>
+                <th>Category</th>
+                <th>Active</th>
+              </tr>
+            </thead>
+            <tbody id="list-product">
+              <tr>
+                <td>1</td>
+                <td>
+                  <img src="./image/Tiểu cảnh/Cần thăng.jpg" alt="hinh-anh" />
+                </td>
+                <td>Tiểu cảnh Cần Thăng</td>
+                <td>250,000đ</td>
+                <td>100</td>
+                <td>Tiểu cảnh</td>
+                <td>
+                  <button>Update</button>
+                  <button>Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="box" id="next-page">
+        </div>
+      </div>
+
+      <div id="boxmodel" class="boxmodel">
+        <div id="newproduct">
+          <form action="" id="form-product">
+            <h2 id="form-title"></h2>
+            <div class="form-input">
+              <label for="">Product Name:</label>
+              <input type="text" id="name-product" /> <br />
+            </div>
+            <div class="form-input">
+              <label for="">Price:</label>
+              <input type="number" id="price-product" /> <br />
+            </div>
+            <div class="form-input">
+              <label for="">Inventory:</label>
+              <input type="number" id="inventory-product" /> <br />
+            </div>
+            <div class="form-input">
+              <label for="">Category:</label>
+
+              <select name="" id="list-category">
+                <!-- <option value="">Tiểu cảnh</option>
+                <option value="">Cây để bàn</option>
+                <option value="">Cây nội thất lớn</option>
+                <option value="">Cây giỏ treo</option>
+                <option value="">Chậu</option> -->
+              </select>
+            </div>
+            <div class="form-input">
+              <label for="">Image:</label>
+              <input
+                type="file"
+                id="input-file"
+                onchange="encodeImageFileAsURL(this)"
+              />
+              <br />
+              <img width="100px" id="image-product" src="" alt="" />
+            </div>
+            <div class="button">
+              <button type="submit" id="create" class="create">Create</button>
+              <button type="button" class="cancel" id="cancel">Cancel</button>
+            </div>
+            <p id="error"></p>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://kit.fontawesome.com/e6840b0d17.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="product.js"></script>
+  </body>
+</html>

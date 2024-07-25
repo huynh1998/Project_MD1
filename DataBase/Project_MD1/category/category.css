@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+header {
+  height: 60px;
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  padding-right: 100px;
+}
+header h2 {
+  font-size: 32px;
+  width: 250px;
+  background-color: #aaaba9;
+  padding-left: 20px;
+  padding-top: 16px;
+  color: #fff;
+}
+.header {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+}
+.header > p i {
+  font-size: 30px;
+}
+.header-right {
+  display: flex;
+}
+.header-right i {
+  padding-left: 50px;
+  padding-right: 10px;
+}
+
+/* Phần main */
+main {
+  display: flex;
+}
+.main-left {
+  width: 250px;
+  height: 100vh;
+  background-color: #aaaba9;
+  padding: 50px;
+}
+.main-left ul li {
+  padding: 16px 0;
+  font-size: 18px;
+}
+.main-left ul li a {
+  color: #fff;
+}
+.main-right {
+  width: 80%;
+  padding: 30px 100px;
+}
+.main-right h2 {
+  padding-bottom: 20px;
+}
+.main-right-top {
+  text-align: right;
+  display: flex;
+  justify-content: space-between;
+}
+.main-right-top input {
+  width: 600px;
+  padding: 10px 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.main-right-top button {
+  width: 150px;
+  color: #fff;
+  padding: 10px 0;
+  background-color: #4cbb00;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.main-right-center {
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.main-right-center button {
+  padding: 4px 10px;
+  border: 1px solid #ccc;
+}
+.main-right-center select {
+  padding: 4px 10px;
+  width: 100px;
+  border: 1px solid #ccc;
+}
+.main-right-center input {
+  padding: 4px 10px;
+  width: 300px;
+  border: 1px solid #ccc;
+}
+.main-right-center input,
+.main-right-center label {
+  margin-right: 10px;
+}
+
+/* table, */
+th,
+td {
+  border: 1px solid #ccc;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+td img {
+  width: 80px;
+}
+td {
+  text-align: center;
+  padding-top: 4px;
+}

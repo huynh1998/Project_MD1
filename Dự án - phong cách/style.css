@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+/* ______ PHAN HEADER ______ */
+header {
+  height: 120px;
+  background-color: #fff;
+  padding: 0 100px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+}
+header .logo img {
+  width: 200px;
+  position: relative;
+  bottom: 42px;
+}
+header .toolbar {
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.toolbar .menu .nav {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.toolbar .menu .nav li h3 {
+  font-size: 14px;
+  padding: 0 11px;
+  color: #000;
+}
+.toolbar .menu .nav li a > i {
+  font-size: 20px;
+  padding: 0 11px;
+  color: #000;
+}
+.toolbar .menu .nav li i {
+  font-size: 12px;
+}
+
+.toolbar .search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav > li > a {
+  text-transform: uppercase;
+}
+.nav li:hover .subnav {
+  display: block;
+}
+
+.nav .subnav {
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  top: 60px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  display: none;
+}
+.nav .subnav li {
+  padding: 10px 10px;
+  font-size: 16px;
+}
+.nav .subnav li:nth-child(2) {
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+}
+.nav .subnav li a {
+  color: rgb(99, 99, 99);
+  line-height: 20px;
+}
+
+.search .input input {
+  padding: 12px 0px;
+  padding-left: 4px;
+  width: 170px;
+  border: none;
+  border-bottom: 1px solid #000;
+  margin-left: 11px;
+}
+.search .icon {
+  position: relative;
+  right: 24px;
+}
+.search .icon i {
+  color: #000;
+}
+
+/* _______Phan main _________ */
+main {
+  background-color: #242424;
+  padding-bottom: 100px;
+}
+.banner img,
+.banner1 img {
+  width: 100%;
+}
+.banner1 {
+  width: 100%;
+  height: 1300px;
+  background-image: url(./image/tropical/Untitled-4X.jpg.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.forest {
+  padding-top: 60px;
+  padding-left: 100px;
+  background-color: #242424;
+  display: flex;
+  gap: 30px;
+  margin-bottom: 100px;
+}
+.forest-left-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+.forest-left .image1,
+.forest-left .image2 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.forest-left .image1 {
+  width: 712px;
+  height: 753px;
+  background-image: url(./image/tropical/2.webp);
+}
+
+.forest-left .image2 {
+  width: 318px;
+  height: 753px;
+  background-image: url(./image/tropical/3.webp);
+}
+.forest-text p {
+  color: #fff;
+  line-height: 25.6px;
+}
+.forest-text p:first-child {
+  padding-bottom: 20px;
+}
+.forest-left-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.forest-left-bottom .image3,
+.forest-left-bottom .image4,
+.forest-left-bottom .image5,
+.forest-left-bottom .image6 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.forest-left-bottom .image3 {
+  width: 510px;
+  height: 580px;
+  background-image: url(./image/tropical/4.webp);
+}
+.forest-left-bottom .image4 {
+  width: 255px;
+  height: 580px;
+  background-image: url(./image/tropical/5.jpg);
+}
+.forest-left-bottom .image5 {
+  width: 255px;
+  height: 280px;
+  background-image: url(./image/tropical/6.jpg);
+  margin-bottom: 20px;
+}
+.forest-left-bottom .image6 {
+  width: 255px;
+  height: 280px;
+  background-image: url(./image/tropical/7.jpg);
+}
+.contact {
+  text-align: center;
+}
+.contact a {
+  color: #fff;
+  width: 200px;
+  padding: 16px 20px;
+  font-size: 18px;
+  border: 1px solid #fff;
+}
+.contact a:hover {
+  background-color: #fff;
+  color: #000;
+}
+/* _______Footer______ */
+footer {
+  background-color: #aaaba9;
+  padding: 50px 0px;
+  padding-left: 100px;
+  display: flex;
+  gap: 300px;
+  align-items: center;
+}
+footer .left p {
+  color: #000;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+}
+footer .left p:last-child {
+  padding-bottom: 0;
+}
+footer .left p:hover,
+footer .left li:hover {
+  font-weight: 700;
+}
+footer .left-menu {
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+footer .left-menu p {
+  padding-bottom: 10px;
+}
+footer .left-menu a {
+  color: #000;
+  font-size: 16px;
+  line-height: 25.6px;
+  text-transform: uppercase;
+}
+footer .right {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+footer .right p {
+  font-size: 16px;
+  line-height: 25.6px;
+}
+footer .right-image {
+  padding-bottom: 30px;
+}
