@@ -1,0 +1,287 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+/* ______ PHAN HEADER ______ */
+header {
+  height: 120px;
+  background-color: #fff;
+  padding: 0 100px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+}
+header .logo img {
+  width: 200px;
+  position: relative;
+  bottom: 42px;
+}
+header .toolbar {
+  padding-top: 40px;
+  display: flex;
+}
+.toolbar .menu .nav {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.toolbar .menu .nav li h3 {
+  font-size: 14px;
+  padding: 0 11px;
+  color: #000;
+}
+.toolbar .menu .nav li a > i {
+  font-size: 20px;
+  padding: 0 11px;
+  color: #000;
+}
+.toolbar .menu .nav li i {
+  font-size: 12px;
+}
+
+.toolbar .search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav > li > a {
+  text-transform: uppercase;
+}
+.nav li:hover .subnav {
+  display: block;
+}
+
+.nav .subnav {
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  top: 60px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  display: none;
+}
+.nav .subnav li {
+  padding: 10px 10px;
+  font-size: 16px;
+}
+.nav .subnav li:nth-child(2) {
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+}
+.nav .subnav li a {
+  color: rgb(99, 99, 99);
+  line-height: 20px;
+}
+
+.search .input input {
+  padding: 12px 0px;
+  padding-left: 4px;
+  width: 170px;
+  border: none;
+  border-bottom: 1px solid #000;
+  margin-left: 11px;
+}
+.search .icon {
+  position: relative;
+  right: 24px;
+}
+.search .icon i {
+  color: #000;
+}
+
+/* ____________________________________________ */
+
+.container {
+  padding: 50px 100px;
+}
+.boxmoel {
+  display: flex;
+}
+.breadcrumb {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.breadcrumb span {
+  color: #ccc;
+}
+
+.breadcrumb .active {
+  color: #000;
+}
+
+.cart {
+  width: 70%;
+  background-color: #fff;
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background-color: #f9f9f9;
+}
+
+.product-image {
+  width: 50px;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-btn {
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.quantity-control input {
+  width: 50px;
+  text-align: center;
+  border: 1px solid #ddd;
+  margin: 0 5px;
+}
+
+.cart-actions {
+  text-align: left;
+}
+
+.continue-shopping {
+  background-color: #fff;
+  border: 1px solid #000;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.cart-summary {
+  width: 30%;
+}
+
+.summary {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.summary p {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  font-size: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.checkout-button {
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.coupon {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.coupon p {
+  font-size: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.coupon input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  margin: 15px 0;
+}
+
+.apply-coupon {
+  background-color: #f9f9f9;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  width: 100%;
+}
+
+/* _______Footer______ */
+footer {
+  background-color: #aaaba9;
+  padding: 50px 0px;
+  padding-left: 100px;
+  display: flex;
+  gap: 300px;
+  align-items: center;
+}
+footer .left p {
+  color: #000;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+}
+footer .left p:last-child {
+  padding-bottom: 0;
+}
+footer .left p:hover,
+footer .left li:hover {
+  font-weight: 700;
+}
+footer .left-menu {
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+footer .left-menu p {
+  padding-bottom: 10px;
+}
+footer .left-menu a {
+  color: #000;
+  font-size: 16px;
+  line-height: 25.6px;
+  text-transform: uppercase;
+}
+footer .right {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+footer .right p {
+  font-size: 16px;
+  line-height: 25.6px;
+}
+footer .right-image {
+  padding-bottom: 30px;
+}
