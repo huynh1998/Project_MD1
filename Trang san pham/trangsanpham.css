@@ -111,6 +111,24 @@ header .toolbar {
   position: relative;
   top: 430px;
 }
+
+.filter {
+  padding-left: 100px;
+  padding-top: 20px;
+}
+.box-cart {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ededed;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -8px;
+  right: 0;
+}
 /* _____Phan product_____ */
 .products {
   padding: 100px 120px 0 100px;
@@ -147,14 +165,15 @@ header .toolbar {
   padding: 16px 0;
   border-top: 1px solid #ccc;
 }
-.product-tree1 .link a {
+.product-tree1 .link button {
   padding: 10px 16px;
   border: 1px solid #000;
+  background-color: #fff;
   color: #000;
   font-size: 12.8px;
   line-height: 20.48px;
 }
-.product-tree1 .link a:hover {
+.product-tree1 .link button:hover {
   color: #fff;
   background-color: #000;
 }

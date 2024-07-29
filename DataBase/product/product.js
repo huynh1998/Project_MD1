@@ -147,7 +147,7 @@ formProduct.addEventListener("submit", function (event) {
     image: imageBase64,
     price: +priceProduct,
     inventory: +inventoryProcduct,
-    categoryId: +document.getElementById("list-category").value,
+    categoryId: +listCategory.value,
   };
 
   dbProduct.push(newProduct);

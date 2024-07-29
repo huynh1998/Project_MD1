@@ -66,8 +66,11 @@
             <li id="log-out">
               <i class="fa-solid fa-arrow-right-from-bracket"></i>
             </li>
-            <li>
-              <a href="#"> <i class="fa-solid fa-cart-shopping"></i></a>
+            <li style="position: relative">
+              <a href="../Trang giỏ hàng/cart.html"> <i class="fa-solid fa-cart-shopping"></i></a>
+              <div class="box-cart">
+                <span id="count-item-cart" style="font-size: 14px">1</span>
+              </div>
             </li>
           </ul>
         </div>
@@ -84,6 +87,15 @@
     <main>
       <div class="banner">
         <img src="./img/banner/Untitled-4-1-1400x298.png.webp" alt="hinh-anh" />
+      </div>
+      <div class="filter">
+        <label for="filter-price">Lọc theo giá:</label>
+        <select id="filter-price">
+          <option value="0">Tất cả</option>
+          <option value="1">Dưới 200.000đ</option>
+          <option value="2">Từ 200.000đ-500.000đ</option>
+          <option value="3">Trên 500.000đ</option>
+        </select>
       </div>
 
       <div class="products" id="list-products">
@@ -383,5 +395,3 @@
     <script src="trangsanpham.js"></script>
   </body>
 </html>
-
-

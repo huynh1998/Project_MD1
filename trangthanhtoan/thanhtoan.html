@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout Page</title>
+    <link rel="stylesheet" href="./thanhtoan.css" />
+  </head>
+
+  <body>
+    <div class="container" style="gap: 10px">
+      <div class="billing-details">
+        <h2>Billing Details</h2>
+        <form>
+          <label for="name">Tên *</label>
+          <input type="text" id="name" name="name" required />
+          <p style="color: red" id="error-name"></p>
+
+          <label for="address">Địa chỉ *</label>
+          <input type="text" id="address" name="address" required />
+          <p style="color: red" id="error-address"></p>
+
+          <label for="phone">Số điện thoại *</label>
+          <input type="tel" id="phone" name="phone" required />
+          <p style="color: red" id="error-phone"></p>
+
+          <label for="email">Địa chỉ email *</label>
+          <input type="email" id="email" name="email" required />
+          <p style="color: red" id="error-email"></p>
+
+          <label for="order-notes">Ghi chú đơn hàng (tùy chọn)</label>
+          <textarea
+            id="order-notes"
+            name="order-notes"
+            placeholder="Ghi chú về đơn hàng, ví dụ: thời gian hay chỉ dẫn địa điểm giao hàng chi tiết hơn."
+          ></textarea>
+        </form>
+      </div>
+
+      <div class="order-details">
+        <h2>Your Order</h2>
+        <div class="order-summary">
+          <div class="product">
+            <p>SẢN PHẨM</p>
+            <p>TẠM TÍNH</p>
+          </div>
+
+          <div id="product" class="product" style="display: block"></div>
+
+          <div class="subtotal">
+            <p>Tạm tính</p>
+            <p id="subtotal"></p>
+          </div>
+          <div class="shipping">
+            <p>Giao hàng</p>
+            <p>Tính phí theo đơn vị vận chuyển</p>
+          </div>
+          <div class="total">
+            <p>Tổng</p>
+            <p id="total-price"></p>
+          </div>
+        </div>
+        <button
+          id="order"
+          style="
+            background-color: #d26a00;
+            color: #fff;
+            width: 100%;
+            padding: 10px 0px;
+            border: none;
+            font-size: 18px;
+          "
+        >
+          Đặt hàng
+        </button>
+      </div>
+    </div>
+    <script src="./thanhtoan.js"></script>
+  </body>
+</html>

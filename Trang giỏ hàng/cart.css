@@ -55,9 +55,6 @@ header .toolbar {
   justify-content: space-between;
   align-items: center;
 }
-.nav > li > a {
-  text-transform: uppercase;
-}
 .nav li:hover .subnav {
   display: block;
 }
@@ -99,7 +96,19 @@ header .toolbar {
 .search .icon i {
   color: #000;
 }
-
+.box-cart {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ededed;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -8px;
+  right: 0;
+}
 /* ____________________________________________ */
 
 .container {
@@ -250,7 +259,6 @@ footer {
 }
 footer .left p {
   color: #000;
-  text-transform: uppercase;
   padding-bottom: 20px;
 }
 footer .left p:last-child {
@@ -271,7 +279,6 @@ footer .left-menu a {
   color: #000;
   font-size: 16px;
   line-height: 25.6px;
-  text-transform: uppercase;
 }
 footer .right {
   display: flex;

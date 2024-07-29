@@ -104,6 +104,20 @@ header .toolbar {
   padding-left: 10px;
 }
 
+.box-cart {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ededed;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -8px;
+  right: 0;
+}
+
 /* _______Phan banner1 _________ */
 
 .banner1-message1 {

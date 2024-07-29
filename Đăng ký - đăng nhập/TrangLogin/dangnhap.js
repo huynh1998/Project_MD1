@@ -46,6 +46,8 @@ login.onclick = function () {
   inputNameLogin.value = "";
   inputPasswordLogin.value = "";
 
+  // Kiểm tra role = 0 thì là user , còn lại sẽ là admin
+
   if (user.role == 0) {
     localStorage.setItem("userlogin", JSON.stringify(user));
     window.location.href = "../../Trang chủ/trangchu.html";

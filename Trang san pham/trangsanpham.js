@@ -1,9 +1,13 @@
 const productTree = document.getElementById("list-products");
 const search = document.getElementById("search");
 const inputProduct = document.getElementById("input-product");
+const filterPrice = document.getElementById("filter-price");
 
 const userName = document.getElementById("user-name");
 const logOut = document.getElementById("log-out");
+
+const addtoCart = document.getElementById("addtoCart");
+const numberCart = document.getElementById("count-item-cart");
 
 // Đẩy product trên admin  lên trang chủ sản phẩm
 
@@ -11,22 +15,48 @@ function renderProducts() {
   let dbCategory = JSON.parse(localStorage.getItem("categories")) || [];
   let dbProduct = JSON.parse(localStorage.getItem("products")) || [];
 
-  //   //Gán biến đó bằng biến lọc điều kiện (Search theo chữ cái)
-
   let stringCategoryHTML = "";
   for (idx in dbCategory) {
     let productOfCategory = dbProduct.filter(
       (el) => el.categoryId == dbCategory[idx].id
     );
 
+    //Gán biến đó bằng biến lọc điều kiện (Search theo chữ cái)
+
     productOfCategory = productOfCategory.filter((el) =>
       el.name.toLowerCase().includes(inputProduct.value.trim().toLowerCase())
     );
 
+    //Lọc theo gia PriceProduct
+
+    switch (filterPrice.value) {
+      case "0":
+        break;
+
+      case "1":
+        productOfCategory = productOfCategory.filter(
+          (element) => element.price < 200000
+        );
+        break;
+
+      case "2":
+        productOfCategory = productOfCategory.filter(
+          (element) => element.price >= 200000 && element.price < 500000
+        );
+        break;
+
+      case "3":
+        productOfCategory = productOfCategory.filter(
+          (element) => element.price >= 500000
+        );
+        break;
+    }
     let stringProducHTMl = "";
     for (let jdx = 0; jdx < productOfCategory.length; jdx++) {
       stringProducHTMl += `
-        <div class="product-tree">
+        <div class="product-tree" onclick="detailProduct(${
+          productOfCategory[jdx].id
+        })">
             <div class="product-tree1">
               <div class="image">
                 <a href="../Trangchitiet/infor.html">
@@ -41,8 +71,8 @@ function renderProducts() {
                   }).format(productOfCategory[jdx].price)}VNĐ</p>
                 </div>
                 <div class="link">
-                  <a href="">MUA NGAY</a>
-                  <a href="">THÊM VÀO GIỎ HÀNG</a>
+                  <button type='button'>MUA NGAY</button>
+                  <button id="addtoCart" type='button'>THÊM VÀO GIỎ HÀNG</button>
                 </div>
               </div>
             </div>
@@ -75,9 +105,18 @@ search.onclick = function () {
 
 function renderUser() {
   const userLogin = JSON.parse(localStorage.getItem("userlogin"));
+  const cart = userLogin.cart;
+
   if (userLogin) {
     userName.innerHTML = userLogin.name;
     logOut.style.display = "block";
+    //Hiển thị count trên giỏ hàng khi ấn thêm giỏ hàng ở chi tiết sản phẩm
+    let count = 0;
+
+    for (let i = 0; i < cart.length; i++) {
+      count += cart[i].quantity;
+    }
+    numberCart.innerHTML = count;
   } else {
     logOut.style.display = "none";
   }
@@ -90,3 +129,18 @@ logOut.addEventListener("click", function () {
   window.location.href = "../Đăng ký - đăng nhập/TrangLogin/dangnhap.html";
   renderUser();
 });
+
+//___________________________________Lọc giá sản phẩm_________________________________
+
+filterPrice.onchange = function () {
+  renderProducts();
+};
+
+//__________________________________Thêm vào giỏ hàng_________________________________
+
+// addtoCart.onclick = function () {};
+
+function detailProduct(productId) {
+  window.localStorage.setItem("productId", JSON.stringify(productId));
+  window.location.href = "../Trangchitiet/infor.html";
+}
