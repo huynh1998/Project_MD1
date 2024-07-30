@@ -105,9 +105,9 @@ search.onclick = function () {
 
 function renderUser() {
   const userLogin = JSON.parse(localStorage.getItem("userlogin"));
-  const cart = userLogin.cart;
 
   if (userLogin) {
+    const cart = userLogin.cart;
     userName.innerHTML = userLogin.name;
     logOut.style.display = "block";
     //Hiển thị count trên giỏ hàng khi ấn thêm giỏ hàng ở chi tiết sản phẩm

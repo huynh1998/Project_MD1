@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quản lý người dùng</title>
+  <link rel="stylesheet" href="user.css" />
+</head>
+
+<body>
+  <header>
+    <h2>Managent</h2>
+    <div class="header">
+      <p><i class="fa-solid fa-bars"></i></p>
+      <div class="header-right">
+        <p>
+          <i class="fa-solid fa-user"></i>
+          <strong>Huynhpham</strong>
+          <button type="button" id="logout">Đăng xuất</button>
+        </p>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="main-left">
+      <ul>
+        <li>
+          <a href="../../DataBase/category/category.html"><i class="fa-solid fa-hand-holding-dollar"></i>Category</a>
+        </li>
+        <li>
+          <a href="../../DataBase/product/product.html"><i class="fa-solid fa-table-cells"></i> Product</a>
+        </li>
+        <li>
+          <a href=""><i class="fa-solid fa-user"></i> User</a>
+        </li>
+        <li>
+          <a href="../../DataBase/order/order.html"><i class="fa-solid fa-cart-shopping"></i> Order</a>
+        </li>
+      </ul>
+    </div>
+    <div class="main-right">
+      <div>
+        <h2>User List</h2>
+      </div>
+      <div class="main-right-center">
+        <div>
+          <input type="text" id="text-search" />
+          <button id="search">Search</button>
+        </div>
+        <div>
+          <label for="arrange">Arrange</label>
+          <select name="arrange" id="select-arrange">
+            <option value="tatca">Tất cả</option>
+            <option value="tangdan">Tăng dần</option>
+            <option value="giamdan">Giảm dần</option>
+          </select>
+        </div>
+      </div>
+      <div class="main-right-bottom">
+        <table>
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>FullName</th>
+              <th>Email</th>
+              <th>Password</th>
+              <th>Status</th>
+              <th>Role</th>
+              <th>Active</th>
+            </tr>
+          </thead>
+          <tbody id="list-user">
+            <!-- <tr>
+                <td>1</td>
+                <td>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <button>Open/Block</button>
+                </td>
+              </tr> -->
+          </tbody>
+        </table>
+        <div class="box" id="next-page">
+        </div>
+      </div>
+  </main>
+
+  <script src="https://kit.fontawesome.com/e6840b0d17.js" crossorigin="anonymous"></script>
+
+  <script src="user.js"></script>
+</body>
+
+</html>
+

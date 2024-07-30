@@ -18,12 +18,13 @@ let product;
 
 function renderUser() {
   const userLogin = JSON.parse(localStorage.getItem("userlogin"));
-  const cart = userLogin.cart;
   if (userLogin) {
+    const cart = userLogin.cart;
     userName.innerHTML = userLogin.name;
     logOut.style.display = "block";
 
     //Hien thi len gio hang
+
     let count = 0;
 
     for (let i = 0; i < cart.length; i++) {
@@ -31,13 +32,13 @@ function renderUser() {
     }
     numberCart.innerHTML = count;
   } else {
+    console.log(logOut);
     logOut.style.display = "none";
   }
 }
 renderUser();
 
 logOut.addEventListener("click", function () {
-  console.log("oke");
   localStorage.removeItem("userlogin");
   window.location.href = "../Đăng ký - đăng nhập/TrangLogin/dangnhap.html";
   renderUser();

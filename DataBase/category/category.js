@@ -45,6 +45,7 @@ submit.onclick = function () {
     //logic update
 
     //Tìm vị trí update = vị trí của phần tử trong dbCategory
+
     let vitrisua = dbCategory.findIndex(
       (element) => element.id === idUpdateGlobal
     );
@@ -77,6 +78,7 @@ submit.onclick = function () {
   input.value = "";
 
   //Render lại khi thêm 1 category vào
+
   renderCategory();
 };
 //
@@ -90,6 +92,7 @@ function renderCategory() {
   let dbCategory = JSON.parse(localStorage.getItem("categories")) || [];
 
   //Gán biến đó bằng biến lọc điều kiện
+
   dbCategory = dbCategory.filter((el) =>
     el.name.toLowerCase().includes(textSearch.value.trim().toLowerCase())
   );

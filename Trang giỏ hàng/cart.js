@@ -16,8 +16,8 @@ const orderBill = document.getElementById("order");
 
 function renderCart() {
   const userLogin = JSON.parse(localStorage.getItem("userlogin"));
-  const cart = userLogin.cart;
   if (userLogin) {
+    const cart = userLogin.cart;
     userName.innerHTML = userLogin.name;
     logOut.style.display = "block";
 
@@ -44,7 +44,7 @@ function renderPayment() {
   for (let idx in cart) {
     const product = dbProduct.find((el) => el.id == cart[idx].productId);
     totalPrice += product.price * cart[idx].quantity;
-    stringProductHTML += `<tbody>
+    stringProductHTML += `
               <tr>
                 <td>
                   <img

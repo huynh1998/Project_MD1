@@ -1,4 +1,7 @@
 const listOrder = document.getElementById("list-order");
+const selectSort = document.getElementById("select-sort");
+const textSearch = document.getElementById("text-search");
+const search = document.getElementById("search");
 
 const pageUser = document.getElementById("next-page");
 const pageSize = 5; // kích cỡ 1 trang chứa sản phẩm
@@ -18,6 +21,27 @@ function renderOrder() {
     end = orders.length;
   }
   orders = orders.slice(start, end); //new db đã cắt
+
+  //Gán biến đó bằng biến lọc điều kiện
+
+  orders = orders.filter((el) =>
+    el.name.toLowerCase().includes(textSearch.value.trim().toLowerCase())
+  );
+
+  //sap xep theo gia tri selectSort.value = bandau | tang dan | giam dan
+
+  switch (selectSort.value) {
+    case "bandau":
+      break;
+    case "tangdan":
+      orders.sort((a, b) => a.name.localeCompare(b.name));
+      // sap xep tang dan
+      break;
+    case "giamdan":
+      orders.sort((a, b) => b.name.localeCompare(a.name));
+      // sap xep giam dan
+      break;
+  }
 
   let stringHTML = "";
   for (let idx in orders) {
@@ -59,7 +83,7 @@ function renderOrder() {
 renderOrder();
 
 function changeStatus(orderId, status) {
-  const orders = JSON.parse(localStorage.getItem("orders")) || [];
+  let orders = JSON.parse(localStorage.getItem("orders")) || [];
   const index = orders.findIndex((el) => el.id == orderId);
 
   orders[index].status = status;
@@ -123,3 +147,15 @@ function changePage(status) {
   }
   renderOrder();
 }
+
+//___________________________________search_______________________________________
+
+search.onclick = function () {
+  renderOrder();
+};
+
+//_______________________________Sapxep ______________________________________________
+
+selectSort.onchange = function () {
+  renderOrder();
+};

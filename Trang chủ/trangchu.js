@@ -5,8 +5,9 @@ const numberCart = document.getElementById("count-item-cart");
 
 function renderUser() {
   const userLogin = JSON.parse(localStorage.getItem("userlogin"));
-  const cart = userLogin.cart;
+
   if (userLogin) {
+    const cart = userLogin.cart;
     userName.innerHTML = userLogin.name;
     logOut.style.display = "block";
     //Hiển thị count trên giỏ hàng khi ấn thêm giỏ hàng ở chi tiết sản phẩm
@@ -21,12 +22,8 @@ function renderUser() {
   }
 }
 renderUser();
-function logout() {
-  console.log("12333");
-}
 
 logOut.addEventListener("click", function () {
-  console.log("oke");
   localStorage.removeItem("userlogin");
   window.location.href = "./trangchu.html";
   renderUser();
